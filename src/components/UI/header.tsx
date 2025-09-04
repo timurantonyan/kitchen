@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {siteConfig} from "@/config/site.config";
+import {layoutConfig} from "@/config/layout.config";
 
 export const Logo = () => {
     return <Image src="/logo.png"
@@ -46,7 +47,8 @@ export default function Header() {
 
 
     return (
-        <Navbar>
+        <Navbar
+            style={{height: layoutConfig.heightHeader}}>
             <NavbarBrand>
                 <Link href="/" className="flex items-center gap-1">
                     <Logo/>
